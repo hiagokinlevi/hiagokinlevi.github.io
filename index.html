@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hiago Kin Levi | Cybersecurity Portfolio</title>
+    <meta
+      name="description"
+      content="Official website of Hiago Kin Levi. Defensive cybersecurity portfolio spanning incident response, DFIR, cloud security, WAF, IAM, AI security, containers, phishing monitoring, and applied cryptography."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://hiagokinlevi.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hiago Kin Levi | Cybersecurity Portfolio">
+    <meta
+      property="og:description"
+      content="Official website and public portfolio hub for Hiago Kin Levi and the Cyber Port defensive security ecosystem."
+    >
+    <meta property="og:url" content="https://hiagokinlevi.github.io/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/134866132?v=4">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hiago Kin Levi | Cybersecurity Portfolio">
+    <meta
+      name="twitter:description"
+      content="Official website and public portfolio hub for Hiago Kin Levi and the Cyber Port defensive security ecosystem."
+    >
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/134866132?v=4">
+    <style>
+      :root {
+        --bg: #f4f2eb;
+        --surface: #fffdf7;
+        --text: #202225;
+        --muted: #4c535c;
+        --line: #d9d2bf;
+        --accent: #0f8b6f;
+        --accent-2: #bf5b2c;
+        --max: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #ece8db 0%, var(--bg) 45%, #f8f6ef 100%);
+        color: var(--text);
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      a:hover {
+        color: var(--accent-2);
+      }
+
+      .page {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 24px 20px 56px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 112px 1fr;
+        gap: 20px;
+        align-items: center;
+        padding: 20px 0 10px;
+      }
+
+      .avatar {
+        width: 112px;
+        height: 112px;
+        border-radius: 8px;
+        object-fit: cover;
+        border: 1px solid var(--line);
+        background: #ddd;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3.3rem);
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+      }
+
+      .lede {
+        margin: 12px 0 0;
+        max-width: 830px;
+        color: var(--muted);
+        font-size: 1.04rem;
+        line-height: 1.6;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 8px;
+        color: var(--accent-2);
+        font-size: 0.9rem;
+      }
+
+      .link-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 18px 0 28px;
+      }
+
+      .link-row a {
+        text-decoration: none;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        color: var(--text);
+      }
+
+      .link-row a:hover {
+        border-color: var(--accent);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .panel {
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 253, 247, 0.92);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+        line-height: 1.7;
+      }
+
+      .repos {
+        margin-top: 22px;
+      }
+
+      .repo-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 24px;
+      }
+
+      .repo-list a {
+        text-decoration: none;
+      }
+
+      footer {
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 720px) {
+        .hero,
+        .grid,
+        .repo-list {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          gap: 14px;
+        }
+
+        .avatar {
+          width: 96px;
+          height: 96px;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hiago Kin Levi",
+        "url": "https://hiagokinlevi.github.io/",
+        "image": "https://avatars.githubusercontent.com/u/134866132?v=4",
+        "sameAs": [
+          "https://github.com/hiagokinlevi",
+          "https://github.com/hiagokinlevi/Cyber-Port",
+          "https://br.linkedin.com/in/hiagokinlevi"
+        ],
+        "jobTitle": "Cybersecurity Engineer",
+        "description": "Cyber Ops since 2007. Builder of defensive security tooling across incident response, DFIR, IAM, AppSec, cloud posture, detection engineering, AI security, containers, phishing monitoring, and applied cryptography."
+      }
+    </script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero" aria-label="Profile">
+        <img
+          class="avatar"
+          src="https://avatars.githubusercontent.com/u/134866132?v=4"
+          alt="Portrait of Hiago Kin Levi"
+        >
+        <div>
+          <span class="eyebrow">Official public profile</span>
+          <h1>Hiago Kin Levi</h1>
+          <p class="lede">
+            Cyber Ops since 2007. I build defensive security tooling and public educational material
+            across incident response, DFIR, cloud security, IAM, WAF, secrets detection, AI
+            security, containers, phishing monitoring, and applied cryptography.
+          </p>
+        </div>
+      </section>
+
+      <nav class="link-row" aria-label="Official links">
+        <a href="https://github.com/hiagokinlevi">GitHub Profile</a>
+        <a href="https://github.com/hiagokinlevi/Cyber-Port">Cyber Port</a>
+        <a href="https://br.linkedin.com/in/hiagokinlevi">LinkedIn</a>
+      </nav>
+
+      <section class="grid" aria-label="Overview">
+        <article class="panel">
+          <h2>Current Public Focus</h2>
+          <ul>
+            <li>Defensive-only cybersecurity tooling</li>
+            <li>Tested, documented, reusable engineering assets</li>
+            <li>Security education for beginner to advanced teams</li>
+            <li>Continuous micro-iteration across a 13-repository portfolio</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h2>Core Domains</h2>
+          <ul>
+            <li>Incident response and DFIR</li>
+            <li>Cloud posture, IAM, and container security</li>
+            <li>WAF defense, AppSec, and secure pipelines</li>
+            <li>AI security, secrets monitoring, and cryptography</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="repos panel" aria-label="Repositories">
+        <h2>Cyber Port Repositories</h2>
+        <div class="repo-list">
+          <a href="https://github.com/hiagokinlevi/honeypot-foundry">honeypot-foundry</a>
+          <a href="https://github.com/hiagokinlevi/dfir-attack-lab">dfir-attack-lab</a>
+          <a href="https://github.com/hiagokinlevi/waf-defense-rulepacks">waf-defense-rulepacks</a>
+          <a href="https://github.com/hiagokinlevi/secure-pipeline-blueprints">secure-pipeline-blueprints</a>
+          <a href="https://github.com/hiagokinlevi/ai-security-guardrails">ai-security-guardrails</a>
+          <a href="https://github.com/hiagokinlevi/iam-audit-lab">iam-audit-lab</a>
+          <a href="https://github.com/hiagokinlevi/cloud-posture-watch">cloud-posture-watch</a>
+          <a href="https://github.com/hiagokinlevi/container-defense-stack">container-defense-stack</a>
+          <a href="https://github.com/hiagokinlevi/ir-playbooks-automation">ir-playbooks-automation</a>
+          <a href="https://github.com/hiagokinlevi/cryptologik">cryptologik</a>
+          <a href="https://github.com/hiagokinlevi/offensive-gvuln">offensive-gvuln</a>
+          <a href="https://github.com/hiagokinlevi/phishing-surface-monitor">phishing-surface-monitor</a>
+          <a href="https://github.com/hiagokinlevi/secret-leak-sentinel">secret-leak-sentinel</a>
+        </div>
+      </section>
+
+      <footer>
+        This website is the official public hub for attribution, discovery, and portfolio navigation.
+        All portfolio projects are released for public referenced use under CC BY 4.0.
+      </footer>
+    </main>
+  </body>
+</html>

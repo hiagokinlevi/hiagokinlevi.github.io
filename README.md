@@ -1,2 +1,13 @@
 # hiagokinlevi.github.io
-Official website and public security portfolio hub for Hiago Kin Levi
+
+Official website and public cybersecurity portfolio hub for Hiago Kin Levi.
+
+Live URL:
+
+- https://hiagokinlevi.github.io/
+
+Primary links:
+
+- https://github.com/hiagokinlevi
+- https://github.com/hiagokinlevi/Cyber-Port
+- https://br.linkedin.com/in/hiagokinlevi
