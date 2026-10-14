@@ -3,188 +3,109 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hiago Kin Levi | Cybersecurity Portfolio</title>
-    <meta
-      name="description"
-      content="Official website of Hiago Kin Levi. Defensive cybersecurity portfolio spanning incident response, DFIR, cloud security, WAF, IAM, AI security, containers, phishing monitoring, and applied cryptography."
-    >
+    <meta name="theme-color" content="#071629">
+    <meta name="description" content="Hiago Kin Levi builds defensive cybersecurity tools, OpenCyber Academy's free courses, and research on governed AI for security operations.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://hiagokinlevi.github.io/">
+    <title>Hiago Kin Levi — Cybersecurity, Open Education &amp; AI Research</title>
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Hiago Kin Levi | Cybersecurity Portfolio">
-    <meta
-      property="og:description"
-      content="Official website of Hiago Kin Levi and CyberABC — Cybersecurity Academic Books Collection, a free public cybersecurity learning library."
-    >
+    <meta property="og:title" content="Hiago Kin Levi — Cybersecurity, Open Education &amp; AI Research">
+    <meta property="og:description" content="Defensive security engineering, free courses at OpenCyber Academy, and research on governed AI.">
     <meta property="og:url" content="https://hiagokinlevi.github.io/">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/134866132?v=4">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hiago Kin Levi | Cybersecurity Portfolio">
-    <meta
-      name="twitter:description"
-      content="Official website of Hiago Kin Levi and CyberABC — Cybersecurity Academic Books Collection, a free public cybersecurity learning library."
-    >
+    <meta name="twitter:title" content="Hiago Kin Levi — Cybersecurity &amp; Open Education">
+    <meta name="twitter:description" content="Explore OpenCyber Academy, defensive engineering projects, and governed AI research.">
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/134866132?v=4">
     <style>
       :root {
-        --bg: #f4f2eb;
-        --surface: #fffdf7;
-        --text: #202225;
-        --muted: #4c535c;
-        --line: #d9d2bf;
-        --accent: #0f8b6f;
-        --accent-2: #bf5b2c;
-        --max: 1120px;
+        color-scheme: dark light;
+        --bg: #071629;
+        --surface: #0d2340;
+        --surface-2: #112a4a;
+        --text: #f0f5fc;
+        --muted: #b6c5d8;
+        --line: #315074;
+        --link: #a8ccff;
+        --gold: #e4c27d;
+        --gold-ink: #122641;
+        --shadow: 0 24px 54px rgba(0, 0, 0, .2);
       }
-
-      * {
-        box-sizing: border-box;
-      }
-
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
-        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: linear-gradient(180deg, #ece8db 0%, var(--bg) 45%, #f8f6ef 100%);
+        background: radial-gradient(circle at 82% 8%, #133a68 0, transparent 31rem), var(--bg);
         color: var(--text);
+        font: 400 1rem/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
-
-      a {
-        color: var(--accent);
+      a { color: var(--link); text-underline-offset: .22em; }
+      a:hover { color: var(--gold); }
+      a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+      .skip-link { position: absolute; top: -5rem; left: 1rem; z-index: 10; padding: .6rem .9rem; background: var(--gold); color: var(--gold-ink); }
+      .skip-link:focus { top: 1rem; }
+      .container { width: min(100% - 2.5rem, 1120px); margin-inline: auto; }
+      .site-header { border-bottom: 1px solid var(--line); background: rgba(7, 22, 41, .88); }
+      .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.1rem; }
+      .brand { color: var(--text); font-size: 1.04rem; font-weight: 650; letter-spacing: .04em; text-decoration: none; white-space: nowrap; }
+      .brand span { color: var(--gold); }
+      .top-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.35rem; }
+      .top-nav a { color: var(--muted); font-size: .94rem; text-decoration: none; }
+      .top-nav a:hover { color: var(--gold); }
+      .hero { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(240px, .55fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; padding-block: clamp(3.5rem, 8vw, 7rem); }
+      .eyebrow { margin: 0 0 .85rem; color: var(--gold); font-size: .81rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { max-width: 12ch; margin-bottom: 1.25rem; font-size: clamp(3.4rem, 8vw, 6rem); font-weight: 620; letter-spacing: -.055em; line-height: 1.01; }
+      h2 { margin-bottom: .75rem; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 610; letter-spacing: -.04em; line-height: 1.15; }
+      h3 { margin-bottom: .6rem; font-size: 1.22rem; font-weight: 620; line-height: 1.3; }
+      .lede { max-width: 61ch; margin-bottom: 1.8rem; color: var(--muted); font-size: clamp(1.12rem, 1.8vw, 1.32rem); line-height: 1.6; }
+      .actions, .text-links { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.3rem; }
+      .button { display: inline-flex; align-items: center; justify-content: center; min-height: 2.9rem; padding: .65rem 1.05rem; border: 1px solid var(--line); border-radius: 5px; color: var(--text); font-weight: 600; text-decoration: none; }
+      .button:hover { border-color: var(--gold); }
+      .button.primary { border-color: var(--gold); background: var(--gold); color: var(--gold-ink); }
+      .button.primary:hover { background: #f3d69c; color: var(--gold-ink); }
+      .portrait { margin: 0; padding: 1rem; border: 1px solid var(--line); border-radius: 7px; background: linear-gradient(145deg, var(--surface-2), var(--surface)); box-shadow: var(--shadow); }
+      .portrait img { display: block; width: 100%; aspect-ratio: 1; border-radius: 4px; object-fit: cover; object-position: center 35%; }
+      .portrait figcaption { padding: .8rem .2rem .15rem; color: var(--muted); font-size: .86rem; }
+      .section { padding-block: 4rem; border-top: 1px solid var(--line); scroll-margin-top: 2rem; }
+      .section-intro { max-width: 72ch; margin-bottom: 1.7rem; color: var(--muted); }
+      .tag { display: inline-block; margin-bottom: .8rem; color: var(--gold); font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+      .featured { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 2rem; padding: clamp(1.5rem, 4vw, 2.7rem); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 6px; background: var(--surface); }
+      .featured p { color: var(--muted); }
+      .featured p strong { color: var(--text); }
+      .path-list { display: grid; gap: .75rem; align-content: center; }
+      .path-list a { display: block; padding: 1rem; border: 1px solid var(--line); border-radius: 5px; color: var(--text); text-decoration: none; background: var(--surface-2); }
+      .path-list a:hover { border-color: var(--gold); }
+      .path-list small { display: block; color: var(--muted); font-size: .86rem; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+      .card { display: flex; flex-direction: column; min-height: 13rem; padding: 1.55rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+      .card p { color: var(--muted); }
+      .card .text-links { margin-top: auto; }
+      .text-links a { font-weight: 600; }
+      .project-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+      .project-list a { padding: 1.25rem; border: 1px solid var(--line); border-radius: 5px; color: var(--text); font-weight: 600; text-decoration: none; background: var(--surface); }
+      .project-list a:hover { border-color: var(--gold); }
+      .project-list small { display: block; margin-top: .35rem; color: var(--muted); font-size: .86rem; font-weight: 400; }
+      .more-projects { margin: 1.4rem 0 0; }
+      .site-footer { padding-block: 2rem 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+      .site-footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem 2rem; }
+      .site-footer p { max-width: 72ch; margin: 0; }
+      @media (prefers-color-scheme: light) {
+        :root { --bg: #f4f7fb; --surface: #fff; --surface-2: #edf3fa; --text: #14243b; --muted: #44566d; --line: #c8d5e4; --link: #164d88; --gold: #8d6116; --gold-ink: #fff; --shadow: 0 24px 54px rgba(18, 45, 79, .1); }
+        body { background: radial-gradient(circle at 82% 8%, #dfeaf7 0, transparent 31rem), var(--bg); }
+        .site-header { background: rgba(244, 247, 251, .93); }
+        .button.primary { background: #143a65; border-color: #143a65; color: #fff; }
+        .button.primary:hover { background: #245a93; color: #fff; }
       }
-
-      a:hover {
-        color: var(--accent-2);
+      @media (max-width: 760px) {
+        .header-inner, .hero, .featured { display: block; }
+        .top-nav { margin-top: .9rem; }
+        .hero { padding-block: 3.5rem; }
+        .portrait { max-width: 280px; margin-top: 2.3rem; }
+        .grid, .project-list { grid-template-columns: 1fr; }
+        .path-list { margin-top: 1.4rem; }
       }
-
-      .page {
-        max-width: var(--max);
-        margin: 0 auto;
-        padding: 24px 20px 56px;
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: 112px 1fr;
-        gap: 20px;
-        align-items: center;
-        padding: 20px 0 10px;
-      }
-
-      .avatar {
-        width: 112px;
-        height: 112px;
-        border-radius: 8px;
-        object-fit: cover;
-        border: 1px solid var(--line);
-        background: #ddd;
-      }
-
-      h1,
-      h2 {
-        margin: 0;
-        line-height: 1.05;
-      }
-
-      h1 {
-        font-size: clamp(2rem, 4vw, 3.3rem);
-      }
-
-      h2 {
-        font-size: 1.2rem;
-        margin-bottom: 12px;
-      }
-
-      .lede {
-        margin: 12px 0 0;
-        max-width: 830px;
-        color: var(--muted);
-        font-size: 1.04rem;
-        line-height: 1.6;
-      }
-
-      .eyebrow {
-        display: inline-block;
-        margin-bottom: 8px;
-        color: var(--accent-2);
-        font-size: 0.9rem;
-      }
-
-      .link-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 18px 0 28px;
-      }
-
-      .link-row a {
-        text-decoration: none;
-        padding: 10px 12px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        color: var(--text);
-      }
-
-      .link-row a:hover {
-        border-color: var(--accent);
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-        margin-top: 20px;
-      }
-
-      .panel {
-        padding: 18px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: rgba(255, 253, 247, 0.92);
-      }
-
-      ul {
-        margin: 0;
-        padding-left: 20px;
-        line-height: 1.7;
-      }
-
-      .repos {
-        margin-top: 22px;
-      }
-
-      .repo-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px 24px;
-      }
-
-      .repo-list a {
-        text-decoration: none;
-      }
-
-      footer {
-        margin-top: 28px;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      @media (max-width: 720px) {
-        .hero,
-        .grid,
-        .repo-list {
-          grid-template-columns: 1fr;
-        }
-
-        .hero {
-          gap: 14px;
-        }
-
-        .avatar {
-          width: 96px;
-          height: 96px;
-        }
-      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     </style>
     <script type="application/ld+json">
       {
@@ -195,83 +116,101 @@
         "image": "https://avatars.githubusercontent.com/u/134866132?v=4",
         "sameAs": [
           "https://github.com/hiagokinlevi",
-          "https://github.com/hiagokinlevi/CyberABC",
           "https://br.linkedin.com/in/hiagokinlevi"
         ],
-        "jobTitle": "Cybersecurity Engineer",
-        "description": "Cyber Ops since 2007. Builder of defensive security tooling across incident response, DFIR, IAM, AppSec, cloud posture, detection engineering, AI security, containers, phishing monitoring, and applied cryptography."
+        "knowsAbout": ["Incident response", "Digital forensics", "Defensive cybersecurity", "AI security"],
+        "description": "Cybersecurity engineer and open-education builder since 2007; creator of OpenCyber Academy."
       }
     </script>
   </head>
   <body>
-    <main class="page">
-      <section class="hero" aria-label="Profile">
-        <img
-          class="avatar"
-          src="https://avatars.githubusercontent.com/u/134866132?v=4"
-          alt="Portrait of Hiago Kin Levi"
-        >
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Hiago Kin Levi, home">HIAGO <span>KIN LEVI</span></a>
+        <nav class="top-nav" aria-label="Sections">
+          <a href="#education">Education</a>
+          <a href="#research">Research</a>
+          <a href="#engineering">Engineering</a>
+          <a href="#contact">Connect</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="hero" aria-labelledby="page-title">
         <div>
-          <span class="eyebrow">Official public profile</span>
-          <h1>Hiago Kin Levi</h1>
-          <p class="lede">
-            Cyber Ops since 2007. I build defensive security tooling and public educational material
-            across incident response, DFIR, cloud security, IAM, WAF, secrets detection, AI
-            security, containers, phishing monitoring, and applied cryptography.
-          </p>
+          <p class="eyebrow">Defensive cybersecurity · open education</p>
+          <h1 id="page-title">Hiago Kin Levi</h1>
+          <p class="lede">I build security tools, publish free courses, and research how AI can support defenders within clear authority and evidence boundaries.</p>
+          <div class="actions">
+            <a class="button primary" href="https://opencyber.academy/">Explore OpenCyber Academy</a>
+            <a class="button" href="#research">View research</a>
+          </div>
+        </div>
+        <figure class="portrait">
+          <img src="https://avatars.githubusercontent.com/u/134866132?v=4" alt="Portrait of Hiago Kin Levi" width="480" height="480">
+          <figcaption>Cybersecurity and defensive engineering since 2007.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-title">
+        <p class="tag">Open education</p>
+        <h2 id="education-title">Learn cybersecurity, openly.</h2>
+        <p class="section-intro">OpenCyber Academy offers public courses, books, examples and exercises. Reading is free and needs no account. The published source is available on GitHub for learners, educators and AI systems to inspect.</p>
+        <div class="featured">
+          <div>
+            <h3>OpenCyber Academy</h3>
+            <p>Explore 23 academic areas across nine formation levels. The 207 course tracks and nine language editions describe the curriculum's scope; <strong>an outline or partial manuscript is not a completed course.</strong> English is the reference edition, with Portuguese and Spanish following.</p>
+            <div class="text-links">
+              <a href="https://opencyber.academy/">Study on the site</a>
+              <a href="https://github.com/hiagokinlevi/OpenCyberAcademy">Read the source</a>
+              <a href="https://github.com/hiagokinlevi/OpenCyberAcademy/blob/main/BOOK_STANDARD.md">Editorial standard</a>
+            </div>
+          </div>
+          <div class="path-list" aria-label="Choose a study route">
+            <a href="https://opencyber.academy/subjects/"><strong>Browse by subject →</strong><small>Choose an area, then your course level.</small></a>
+            <a href="https://opencyber.academy/levels/"><strong>Browse by level →</strong><small>Choose a level, then a separate course.</small></a>
+          </div>
         </div>
       </section>
 
-      <nav class="link-row" aria-label="Official links">
-        <a href="https://github.com/hiagokinlevi">GitHub Profile</a>
-        <a href="https://github.com/hiagokinlevi/CyberABC">CyberABC Books</a>
-        <a href="https://br.linkedin.com/in/hiagokinlevi">LinkedIn</a>
-      </nav>
-
-      <section class="grid" aria-label="Overview">
-        <article class="panel">
-          <h2>Current Public Focus</h2>
-          <ul>
-            <li>Defensive-only cybersecurity tooling</li>
-            <li>Tested, documented, reusable engineering assets</li>
-            <li>Security education for beginner to advanced teams</li>
-            <li>CyberABC: 23 academic areas across nine learning levels</li>
-          </ul>
-        </article>
-        <article class="panel">
-          <h2>Core Domains</h2>
-          <ul>
-            <li>Incident response and DFIR</li>
-            <li>Cloud posture, IAM, and container security</li>
-            <li>WAF defense, AppSec, and secure pipelines</li>
-            <li>AI security, secrets monitoring, and cryptography</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="repos panel" aria-label="Repositories">
-        <h2>Cybersecurity Projects</h2>
-        <div class="repo-list">
-          <a href="https://github.com/hiagokinlevi/honeypot-foundry">honeypot-foundry</a>
-          <a href="https://github.com/hiagokinlevi/dfir-attack-lab">dfir-attack-lab</a>
-          <a href="https://github.com/hiagokinlevi/waf-defense-rulepacks">waf-defense-rulepacks</a>
-          <a href="https://github.com/hiagokinlevi/secure-pipeline-blueprints">secure-pipeline-blueprints</a>
-          <a href="https://github.com/hiagokinlevi/ai-security-guardrails">ai-security-guardrails</a>
-          <a href="https://github.com/hiagokinlevi/iam-audit-lab">iam-audit-lab</a>
-          <a href="https://github.com/hiagokinlevi/cloud-posture-watch">cloud-posture-watch</a>
-          <a href="https://github.com/hiagokinlevi/container-defense-stack">container-defense-stack</a>
-          <a href="https://github.com/hiagokinlevi/ir-playbooks-automation">ir-playbooks-automation</a>
-          <a href="https://github.com/hiagokinlevi/cryptologik">cryptologik</a>
-          <a href="https://github.com/hiagokinlevi/offensive-gvuln">offensive-gvuln</a>
-          <a href="https://github.com/hiagokinlevi/phishing-surface-monitor">phishing-surface-monitor</a>
-          <a href="https://github.com/hiagokinlevi/secret-leak-sentinel">secret-leak-sentinel</a>
+      <section class="section" id="research" aria-labelledby="research-title">
+        <p class="tag">Research</p>
+        <h2 id="research-title">Governed AI for defensive work.</h2>
+        <p class="section-intro">These projects examine how model output, authority and independent verification should relate to one another. Each repository documents its own scope, assumptions and limitations.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>DAI · Decripte Artificial Intelligence</h3>
+            <p>Research on a cybersecurity language model with model-excluded authority, independent verification and recomputable evidence.</p>
+            <div class="text-links"><a href="https://github.com/hiagokinlevi/DAI-Decripte-Artificial-Intelligence-LLM">Repository</a><a href="https://doi.org/10.5281/zenodo.23089652">Paper</a></div>
+          </article>
+          <article class="card">
+            <h3>ADAI · Autonomous Defensive Artificial Intelligence</h3>
+            <p>A proposed framework for bounded defensive autonomy and evidence-based decisions in production environments.</p>
+            <div class="text-links"><a href="https://github.com/hiagokinlevi/ADAI-Autonomous-Defensive-Artificial-Intelligence">Repository</a><a href="https://doi.org/10.5281/zenodo.23089594">Paper</a></div>
+          </article>
         </div>
       </section>
 
-      <footer>
-        This website is the official public hub for attribution, discovery, and portfolio navigation.
-        All portfolio projects are released for public referenced use under CC BY 4.0.
-      </footer>
+      <section class="section" id="engineering" aria-labelledby="engineering-title">
+        <p class="tag">Engineering</p>
+        <h2 id="engineering-title">Tools for the defensive side.</h2>
+        <p class="section-intro">Practical work across incident response, secure engineering, cloud posture and AI security. The linked repositories carry their own documentation and licenses.</p>
+        <div class="project-list">
+          <a href="https://github.com/hiagokinlevi/ir-playbooks-automation">Incident-response playbooks<small>Defensive triage and response workflows.</small></a>
+          <a href="https://github.com/hiagokinlevi/ai-security-guardrails">AI security guardrails<small>Controls for LLM applications and agents.</small></a>
+          <a href="https://github.com/hiagokinlevi/cloud-posture-watch">Cloud posture watch<small>Review exposure and configuration drift.</small></a>
+        </div>
+        <p class="more-projects"><a href="https://github.com/hiagokinlevi/OpenCyberAcademy/blob/main/PROJECTS.md">See the broader project index →</a></p>
+      </section>
     </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <p>Hiago Kin Levi · Authorized defensive work, reproducible evidence, clear limitations and source attribution.</p>
+        <div class="text-links"><a href="https://github.com/hiagokinlevi">GitHub</a><a href="https://br.linkedin.com/in/hiagokinlevi">LinkedIn</a><a href="https://opencyber.academy/">OpenCyber Academy</a></div>
+      </div>
+    </footer>
   </body>
 </html>
