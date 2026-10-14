@@ -12,6 +12,6 @@ To publish from an authorized local checkout:
 
 1. Make the edit, then run `python3 scripts/validate.py` and review `git diff --check` and the changed page locally.
 2. Commit the verified files as `hiagokinlevi`.
-3. Run `./scripts/deploy-local.sh`. It checks the GitHub account, repository, branch-based Pages source, a clean checkout and remote ancestry; it pushes without force, waits for the Pages build and reads the public page to verify the new content.
+3. Run `./scripts/deploy-local.sh`. It checks the GitHub account, repository, branch-based Pages source, a clean checkout and remote ancestry; it pushes without force, then compares the public HTML, 404 page, robots file and sitemap byte for byte with the local files. GitHub's legacy Pages build API can lag the live site, so the deployed files are the publication check.
 
-Do not create GitHub Actions workflows for this site. If the public build is delayed, inspect the Pages status and the live URL before reporting success.
+Do not create GitHub Actions workflows for this site. If publication is delayed, inspect the Pages status and the live URL before reporting success.

@@ -29,29 +29,27 @@ fi
 
 revision="$(git rev-parse HEAD)"
 git push origin HEAD:main
+verification_dir="$(mktemp -d)"
+trap 'rm -rf "$verification_dir"' EXIT
 for attempt in {1..60}; do
-  build="$(gh api repos/hiagokinlevi/hiagokinlevi.github.io/pages/builds/latest --jq '.commit + " " + .status')"
-  if [[ "$build" == "$revision built" ]]; then
-    break
-  fi
-  if [[ "$build" == "$revision errored" ]]; then
-    echo 'GitHub Pages reported a failed build.' >&2
-    exit 1
-  fi
-  if (( attempt == 60 )); then
-    echo 'Timed out waiting for the published revision.' >&2
-    exit 1
-  fi
-  sleep 5
-done
-
-for attempt in {1..24}; do
-  live_page="$(curl --fail --silent --show-error --max-time 15 https://hiagokinlevi.github.io/)"
-  if [[ "$live_page" == *'Learn cybersecurity, openly.'* && "$live_page" != *'CyberABC'* ]]; then
+  all_match=true
+  for path in index.html 404.html robots.txt sitemap.xml; do
+    if [[ "$path" == index.html ]]; then
+      url="https://hiagokinlevi.github.io/?revision=$revision"
+    else
+      url="https://hiagokinlevi.github.io/$path?revision=$revision"
+    fi
+    if ! curl --fail --silent --show-error --max-time 15 --output "$verification_dir/$path" "$url" ||
+       ! cmp -s "$path" "$verification_dir/$path"; then
+      all_match=false
+      break
+    fi
+  done
+  if [[ "$all_match" == true ]]; then
     echo "Personal site deployed and verified from main $revision"
     exit 0
   fi
   sleep 5
 done
-echo 'GitHub Pages built the revision, but the public page did not update in time.' >&2
+echo 'Timed out waiting for the public site to match the verified local files.' >&2
 exit 1
