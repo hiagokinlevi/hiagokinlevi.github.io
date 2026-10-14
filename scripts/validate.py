@@ -72,4 +72,5 @@ namespace = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 urls = [node.text for node in sitemap.findall(".//s:loc", namespace)]
 assert urls == ["https://hiagokinlevi.github.io/"], "Unexpected sitemap URLs"
 assert "https://hiagokinlevi.github.io/sitemap.xml" in (ROOT / "robots.txt").read_text(), "Sitemap missing from robots"
+assert (ROOT / "favicon.svg").exists() and all('href="/favicon.svg"' in page for page in (home, not_found)), "Favicon missing"
 print("Static profile validation passed: navigation, metadata, structured data, sitemap and legacy name")

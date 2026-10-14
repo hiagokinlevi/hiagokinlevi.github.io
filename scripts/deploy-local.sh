@@ -33,7 +33,7 @@ verification_dir="$(mktemp -d)"
 trap 'rm -rf "$verification_dir"' EXIT
 for attempt in {1..60}; do
   all_match=true
-  for path in index.html 404.html robots.txt sitemap.xml; do
+  for path in index.html 404.html robots.txt sitemap.xml favicon.svg; do
     if [[ "$path" == index.html ]]; then
       url="https://hiagokinlevi.github.io/?revision=$revision"
     else
